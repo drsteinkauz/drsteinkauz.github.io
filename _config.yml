@@ -23,7 +23,7 @@ repository               : "drsteinkauz/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profile_djm.png"
   name             : "Chi Zhang"
   pronouns         : # example: "he/him"  
   bio              : "Master's student in Robotics"
