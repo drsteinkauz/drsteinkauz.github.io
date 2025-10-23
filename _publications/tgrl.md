@@ -1,10 +1,10 @@
 ---
-title: "SPOT: Sensing-augmented Trajectory Planning via Obstacle Threat Modeling"
+title: " Morphology-Aware Graph Reinforcement Learning for Tensegrity Robot Locomotion"
 collection: publications
 category: preprints
-permalink: /publication/spot
+permalink: /publication/tgrl
 excerpt: 'Brief description'
-date: 2025-10-18
+date: 2025-10-23
 venue: 'arXiv preprint'
 # slidesurl: ''
 paperurl: 'https://arxiv.org/abs/2510.16308'
