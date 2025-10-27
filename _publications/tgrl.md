@@ -9,7 +9,7 @@ excerpt: '**Chi Zhang**, Mingrui Li, Wenzhe Tong, and Xiaonan Huang'
 date: 2025-10-23
 venue: 'arXiv preprint'
 # slidesurl: ''
-paperurl: 'https://academicpages.github.io/files/tgrl.pdf'
+paperurl: 'https://drsteinkauz.github.io/files/tgrl.pdf'
 # bibtexurl: ''
 # citation: ''
 ---
