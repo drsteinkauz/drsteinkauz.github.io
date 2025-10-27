@@ -1,7 +1,7 @@
 ---
 title: "SPOT: Sensing-augmented Trajectory Planning via Obstacle Threat Modeling"
 header:
-    teaser: "teaser_figure_spot.png"
+    teaser: "teaser_figure_spot_1.png"
 collection: publications
 category: preprints
 permalink: /publication/spot
