@@ -1,5 +1,5 @@
 ---
-title: " Morphology-Aware Graph Reinforcement Learning for Tensegrity Robot Locomotion"
+title: "Morphology-Aware Graph Reinforcement Learning for Tensegrity Robot Locomotion"
 header:
     teaser: "teaser_figure_tgrl.jpg"
 collection: publications
