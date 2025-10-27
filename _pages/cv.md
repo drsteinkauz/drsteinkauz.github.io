@@ -13,7 +13,7 @@ redirect_from:
   <a href="{{ base_path }}/files/CV.pdf" class="btn btn--primary">Download CV as PDF</a>
 </div>
 
-Education
+<!-- Education
 ======
 * M.S. in Robotics, University of Michigan, 2026 (expected)
 * B.S.E in Mechanical Engineering, Shanghai Jiao Tong University, 2024
@@ -56,7 +56,7 @@ Publications
   {% endfor %}</ul>
 
 Projects
-======
+====== -->
   
 <!-- Talks
 ======
