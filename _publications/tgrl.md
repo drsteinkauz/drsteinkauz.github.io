@@ -1,15 +1,15 @@
 ---
 title: "Morphology-Aware Graph Reinforcement Learning for Tensegrity Robot Locomotion"
 header:
-    teaser: "teaser_figure_tgrl.jpg"
+    teaser: "tgrl_teaser.jpg"
 collection: publications
 category: preprints
 permalink: /publication/tgrl
 excerpt: '**Chi Zhang**, Mingrui Li, Wenzhe Tong, and Xiaonan Huang'
-date: 2025-10-23
-venue: 'arXiv preprint'
+date: 2025-10-30
+venue: 'arXiv preprint, arXiv:2510.26067'
 # slidesurl: ''
-paperurl: 'https://drsteinkauz.github.io/files/tgrl.pdf'
+paperurl: 'https://arxiv.org/abs/2510.26067'
 # bibtexurl: ''
 # citation: ''
 ---
