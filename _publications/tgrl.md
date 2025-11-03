@@ -46,15 +46,30 @@ Therefore, this work adopts a morphology-aware policy using a Graph Neural Netwo
 
     * *Straight-line Tracking*
 
-    <video controls preload="metadata" style="max-width:100%; height:auto; border-radius:6px;"> <source src="{{ base_path }}/videos/tgrl_straight.mp4" type="video/mp4"> <p>Your browser does not support the video tag. You can download it to watch: <a href="{{ base_path }}/videos/tgrl_straight.mp4">Download MP4</a> </p> </video>
+    <iframe 
+        src="https://drive.google.com/file/d/1tsWzfNWocsOtYLcSVNtqEu55zXyUpFwJ/preview"
+        width="640" height="360" 
+        allow="autoplay"
+        style="border:none; border-radius:8px;">
+    </iframe>
 
     * *In-place Turning (Counter Clockwise)*
 
-    <video controls preload="metadata" style="max-width:100%; height:auto; border-radius:6px;"> <source src="{{ base_path }}/videos/tgrl_turnccw.mp4" type="video/mp4"> <p>Your browser does not support the video tag. You can download it to watch: <a href="{{ base_path }}/videos/tgrl_turnccw.mp4">Download MP4</a> </p> </video>
+    <iframe 
+        src="https://drive.google.com/file/d/1EVH3QsTaicFda8P-9UJFNlXUa_0BZ58t/preview"
+        width="640" height="360" 
+        allow="autoplay"
+        style="border:none; border-radius:8px;">
+    </iframe>
 
     * *In-place Turning (Clockwise)*
 
-    <video controls preload="metadata" style="max-width:100%; height:auto; border-radius:6px;"> <source src="{{ base_path }}/videos/tgrl_turncw.mp4" type="video/mp4"> <p>Your browser does not support the video tag. You can download it to watch: <a href="{{ base_path }}/videos/tgrl_turncw.mp4">Download MP4</a> </p> </video>
+    <iframe 
+        src="https://drive.google.com/file/d/1taWbC0BurmavtFdJRjOH2RsLC0izKep5/preview"
+        width="640" height="360" 
+        allow="autoplay"
+        style="border:none; border-radius:8px;">
+    </iframe>
 
 * **Benchmark of Learning Performance.** GNN-based policies achieve higher sample efficiency and final rewards than standard MLP-based baselines.
 
