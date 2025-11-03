@@ -31,24 +31,49 @@ Therefore, this work adopts a morphology-aware policy using a Graph Neural Netwo
 
 ## Methodology
 
-**Graph Construction.** The physical topology of the 3-bar tensegrity robot is modelled as a directed graph $G=(V,E)$, where each node corresponds to a rod end-cap, and edges represent mechanical connections (rigid rods, passive tendons, active tendons) allowing message passing between connected parts. Each node has features (e.g., 3D position, velocity of that end-cap, global task command broadcast), each edge has features encoding relative distance and edge type. The GNN encoder applies multiple layers of message passing over this graph to allow components to share structural information. 
+* **Graph Construction.** The physical topology of the 3-bar tensegrity robot is modelled as a directed graph $G=(V,E)$, where each node corresponds to a rod end-cap, and edges represent mechanical connections (rigid rods, passive tendons, active tendons) allowing message passing between connected parts. Each node has features (e.g., 3D position, velocity of that end-cap, global task command broadcast), each edge has features encoding relative distance and edge type. The GNN encoder applies multiple layers of message passing over this graph to allow components to share structural information. 
 
-**GNN-based SAC (G-SAC).** The GNN serves as the actor network within SAC. The observation encoding maps the raw robot state into node/edge features; the GNN encoder extracts a high‐level representation capturing structural coupling; the actor head outputs tendon length commands (actuation). The entire system is trained via the SAC algorithm on tracking and turning tasks. 
+* **GNN-based SAC (G-SAC).** The GNN serves as the actor network within SAC. The observation encoding maps the raw robot state into node/edge features; the GNN encoder extracts a high‐level representation capturing structural coupling; the actor head outputs tendon length commands (actuation). The entire system is trained via the SAC algorithm on tracking and turning tasks. 
 
-**Training Formulation.** The reward is formulated to support locomotion primitives: straight-line tracking, clockwise and counterclockwise in-place turning. The performance is compared with MLP-based SAC and other RL baselines.
+* **Training Formulation.** The reward is formulated to support locomotion primitives: straight-line tracking, clockwise and counterclockwise in-place turning. The performance is compared with MLP-based SAC and other RL baselines.
 
 ![SAC with GNN-based policy](/images/tgrl_pipeline.jpg)
 *Figure 2: Overview of the proposed morphology-aware GNN-SAC framework for tensegrity robot locomotion. The Soft Actor-Critic (SAC) algorithm integrates a graph neural network (GNN)-based policy that encodes the robot’s topology via message passing among end-cap nodes. The actor generates tendon length commands based on structured observations, enabling morphology-aware learning in both simulation and real-world environments.*
 
 ## Experimental Results
 
-<video controls preload="metadata" style="max-width:100%; height:auto; border-radius:6px;"> <source src="{{ base_path }}/videos/tgrl_straight.mp4" type="video/mp4"> <p>Your browser does not support the video tag. You can download it to watch: <a href="{{ base_path }}/videos/tgrl_straight.mp4">Download MP4</a> </p> </video>
+* **RL Locomotion in Real World.** The GNN-based policies trained for tensegrity locomotion are deployed to the real world with zero-shot transfer. The videos show motion primitives in the real world:
 
-![Benchmarking training performance](/images/tgrl_result_1.png)
-*Figure 3: Benchmark of learning performance across algorithms and network depths. The proposed GNN-SAC consistently outperforms MLP-based SAC (M-SAC), PPO, and TD3 in terms of training reward and sample efficiency for all three locomotion primitives. Subplots (a,c,e) compare algorithms, while (b,d,f) analyze the effect of GNN encoder depth, showing improved performance with multi-layer message passing.*
+    * *Straight-line Tracking*
 
-![Benchmarking motion performance](/images/tgrl_result_2.png)
-*Figure 4: Simulation evaluation of learned motion primitives between Graph-based SAC (G-SAC) and MLP-based SAC (M-SAC): (a) Straight-line tracking error for different waypoint yaw angles; (b) Yaw rate and stability in bidirectional turning tasks.*
+    <video controls preload="metadata" style="max-width:100%; height:auto; border-radius:6px;"> <source src="{{ base_path }}/videos/tgrl_straight.mp4" type="video/mp4"> <p>Your browser does not support the video tag. You can download it to watch: <a href="{{ base_path }}/videos/tgrl_straight.mp4">Download MP4</a> </p> </video>
 
-![Benchmarking robustness](/images/tgrl_result_3.png)
-*Figure 5: Robustness evaluation under model and environment perturbations. (a) (b) Cross-tendon stiffness variation, (c) (d) Observation noise, (e) (f) Ground slope.*
+    * *In-place Turning (Counter Clockwise)*
+
+    <video controls preload="metadata" style="max-width:100%; height:auto; border-radius:6px;"> <source src="{{ base_path }}/videos/tgrl_turnccw.mp4" type="video/mp4"> <p>Your browser does not support the video tag. You can download it to watch: <a href="{{ base_path }}/videos/tgrl_turnccw.mp4">Download MP4</a> </p> </video>
+
+    * *In-place Turning (Clockwise)*
+
+    <video controls preload="metadata" style="max-width:100%; height:auto; border-radius:6px;"> <source src="{{ base_path }}/videos/tgrl_turncw.mp4" type="video/mp4"> <p>Your browser does not support the video tag. You can download it to watch: <a href="{{ base_path }}/videos/tgrl_turncw.mp4">Download MP4</a> </p> </video>
+
+* **Benchmark of Learning Performance.** GNN-based policies achieve higher sample efficiency and final rewards than standard MLP-based baselines.
+
+    ![Benchmarking training performance](/images/tgrl_result_1.png)
+    *Figure 3: Benchmark of learning performance across algorithms and network depths. The proposed GNN-SAC consistently outperforms MLP-based SAC (M-SAC), PPO, and TD3 in terms of training reward and sample efficiency for all three locomotion primitives. Subplots (a,c,e) compare algorithms, while (b,d,f) analyze the effect of GNN encoder depth, showing improved performance with multi-layer message passing.*
+
+    The GNN-based policies also demonstrate improved directional accuracy and robustness in motion primitives.
+
+    ![Benchmarking motion performance](/images/tgrl_result_2.png)
+    *Figure 4: Simulation evaluation of learned motion primitives between Graph-based SAC (G-SAC) and MLP-based SAC (M-SAC): (a) Straight-line tracking error for different waypoint yaw angles; (b) Yaw rate and stability in bidirectional turning tasks.*
+
+* **Robustness Evaluation.** Three perturbations are introduced to evaluate robustness under real-world–like uncertainties:
+
+    * **Cross-tendon stiffness:** varied from 30–1200 N/m (nominal 450~N/m) to capture material and assembly variations.
+    * **State estimation noise:** Gaussian noise $\mathcal{N}(0, \sigma_n)$ with $\sigma_n \in [0, 0.25]$~m was added to end-cap positions to simulate degraded sensing.
+
+    * **Ground slope:** inclinations from $0^{\circ}$ to $35^{\circ}$ were tested using policies trained on flat terrain.
+
+    Across all perturbations and motion primitives, GNN-based policies consistently outperformed MLP-based baselines.
+
+    ![Benchmarking robustness](/images/tgrl_result_3.png)
+    *Figure 5: Robustness evaluation under model and environment perturbations. (a) (b) Cross-tendon stiffness variation, (c) (d) Observation noise, (e) (f) Ground slope.*
