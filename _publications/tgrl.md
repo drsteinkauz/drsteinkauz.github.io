@@ -37,12 +37,12 @@ Therefore, this work adopts a morphology-aware policy using a Graph Neural Netwo
 
 **Training Formulation.** The reward is formulated to support locomotion primitives: straight-line tracking, clockwise and counterclockwise in-place turning. The performance is compared with MLP-based SAC and other RL baselines.
 
-![SAC with GNN-based policy](/images/tgrl_pipeline.png)
+![SAC with GNN-based policy](/images/tgrl_pipeline.jpg)
 *Figure 2: Overview of the proposed morphology-aware GNN-SAC framework for tensegrity robot locomotion. The Soft Actor-Critic (SAC) algorithm integrates a graph neural network (GNN)-based policy that encodes the robot’s topology via message passing among end-cap nodes. The actor generates tendon length commands based on structured observations, enabling morphology-aware learning in both simulation and real-world environments.*
 
 ## Experimental Results
 
-<!-- <video controls preload="metadata" style="max-width:100%; height:auto; border-radius:6px;" poster="{{ base_path }}/images/500x300.png"> <source src="{{ base_path }}/files/demo.mp4" type="video/mp4"> <p>Your browser does not support the video tag. You can download it to watch: <a href="{{ base_path }}/files/demo.mp4">Download MP4</a> </p> </video> -->
+<video controls preload="metadata" style="max-width:100%; height:auto; border-radius:6px;"> <source src="{{ base_path }}/videos/tgrl_straight.mp4" type="video/mp4"> <p>Your browser does not support the video tag. You can download it to watch: <a href="{{ base_path }}/videos/tgrl_straight.mp4">Download MP4</a> </p> </video>
 
 ![Benchmarking training performance](/images/tgrl_result_1.png)
 *Figure 3: Benchmark of learning performance across algorithms and network depths. The proposed GNN-SAC consistently outperforms MLP-based SAC (M-SAC), PPO, and TD3 in terms of training reward and sample efficiency for all three locomotion primitives. Subplots (a,c,e) compare algorithms, while (b,d,f) analyze the effect of GNN encoder depth, showing improved performance with multi-layer message passing.*
