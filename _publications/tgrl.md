@@ -46,30 +46,36 @@ Therefore, this work adopts a morphology-aware policy using a Graph Neural Netwo
 
     * *Straight-line Tracking*
 
+    <div>
     <iframe 
         src="https://drive.google.com/file/d/1tsWzfNWocsOtYLcSVNtqEu55zXyUpFwJ/preview"
         width="640" height="360" 
         allow="autoplay"
         style="border:none; border-radius:8px;">
     </iframe>
+    </div>
 
     * *In-place Turning (Counter Clockwise)*
 
+    <div>
     <iframe 
         src="https://drive.google.com/file/d/1EVH3QsTaicFda8P-9UJFNlXUa_0BZ58t/preview"
         width="640" height="360" 
         allow="autoplay"
         style="border:none; border-radius:8px;">
     </iframe>
+    </div>
 
     * *In-place Turning (Clockwise)*
 
+    <div>
     <iframe 
         src="https://drive.google.com/file/d/1taWbC0BurmavtFdJRjOH2RsLC0izKep5/preview"
         width="640" height="360" 
         allow="autoplay"
         style="border:none; border-radius:8px;">
     </iframe>
+    </div>
 
 * **Benchmark of Learning Performance.** GNN-based policies achieve higher sample efficiency and final rewards than standard MLP-based baselines.
 
