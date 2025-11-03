@@ -14,6 +14,7 @@ paperurl: 'https://arxiv.org/abs/2510.16308'
 # citation: 'C. Zhang, X. Huang, and W. Dong, “Spot: Sensing-augmented trajectory planning via obstacle threat modeling,” 2025. [Online]. Available: https://arxiv.org/abs/2510.16308'
 ---
 ## Abstract
+
 UAVs equipped with a single depth camera face major challenges in dynamic obstacle avoidance due to limited field of view and blind spots. Existing active vision methods that steer onboard cameras often separate motion planning from sensing considerations, leading to delayed obstacle responses. To address this limitation, we present **SPOT** (**S**ensing-augmented **P**lanning via **O**bstacle **T**hreat modeling), a unified framework for observation-aware trajectory planning that integrates sensing objectives directly into motion optimization. Central to SPOT is a Gaussian Process–based obstacle belief map that models both recognized and potential obstacles within a single probabilistic representation. A collision-aware inference mechanism then converts spatial uncertainty and trajectory proximity into a time-varying observation urgency map, enabling real-time, differentiable trajectory optimization (<10 ms). Simulation and real-world results demonstrate that SPOT detects dynamic obstacles 2.8 s earlier than baselines, achieving safer navigation in cluttered, occluded environments.
 
 ## Motivation
