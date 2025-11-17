@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-Chi Zhang is a Master’s student in Robotics at the University of Michigan with a focus on reinforcement learning for robotic motion and navigation, and plans to pursue a PhD. He is currently conducting research on morphology-aware reinforcement learning for tensegrity robot locomotion in [HDR Lab](https://scholar.google.com/citations?user=MNKU_WcAAAAJ) advised by Prof. Xiaonan Huang. Chi received his Bachelor’s degree in Mechanical Engineering from Shanghai Jiao Tong University (SJTU), where he worked in the [CIUS Lab](https://scholar.google.com/citations?user=hbaEVRMAAAAJ) developing a pipeline for sensing-augmented UAV obstacle-aware trajectory planning.
+Chi Zhang is a Master’s student in Robotics at the University of Michigan with a focus on robot learning for locomotion and planning, and plans to pursue a PhD. He is currently conducting research on morphology-aware reinforcement learning for tensegrity robot locomotion in [HDR Lab](https://scholar.google.com/citations?user=MNKU_WcAAAAJ) advised by Prof. Xiaonan Huang. Chi received his Bachelor’s degree in Mechanical Engineering from Shanghai Jiao Tong University (SJTU), where he worked in the [CIUS Lab](https://scholar.google.com/citations?user=hbaEVRMAAAAJ) developing a pipeline for sensing-augmented UAV obstacle-aware trajectory planning.
 
 Education
 ======
