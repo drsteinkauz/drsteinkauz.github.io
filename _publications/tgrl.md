@@ -23,10 +23,10 @@ Tensegrity robots maintain stability through a global balance of tension: every 
 
 At the same time, this network of tensile and compressive elements naturally forms a graph. Such a structural property makes tensegrity systems particularly suitable for graph-based learning architectures.
 
-Therefore, this work adopts a morphology-aware policy using a Graph Neural Network (GNN) that mirrors the robot’s physical topology. By aligning the control policy with the robot’s inherent graph structure, the agent can learn coordinated behaviors that respect the underlying physics of tension and coupling.
+Therefore, this work adopts a morphology-aware policy using a Graph Neural Network (GNN) that mirrors the robot's physical topology. By aligning the control policy with the robot's inherent graph structure, the agent can learn coordinated behaviors that respect the underlying physics of tension and coupling.
 
 ![Morphology-aware GNN policy for tensegrity locomotion](/images/tgrl_teaser.jpg)
-*Figure 1: Morphology-aware graph reinforcement learning for tensegrity locomotion. The robot’s states (end-cap positions and velocities) are encoded as node features in a graph-based policy, which propagates information along the robot’s structural connections. The network outputs tendon length commands to actuate the tensegrity robot to roll forward in physical experiments.*
+*Figure 1: Morphology-aware graph reinforcement learning for tensegrity locomotion. The robot's states (end-cap positions and velocities) are encoded as node features in a graph-based policy, which propagates information along the robot's structural connections. The network outputs tendon length commands to actuate the tensegrity robot to roll forward in physical experiments.*
 
 
 ## Methodology
@@ -38,7 +38,7 @@ Therefore, this work adopts a morphology-aware policy using a Graph Neural Netwo
 * **Training Formulation.** The reward is formulated to support locomotion primitives: straight-line tracking, clockwise and counterclockwise in-place turning. The performance is compared with MLP-based SAC and other RL baselines.
 
 ![SAC with GNN-based policy](/images/tgrl_pipeline.jpg)
-*Figure 2: Overview of the proposed morphology-aware GNN-SAC framework for tensegrity robot locomotion. The Soft Actor-Critic (SAC) algorithm integrates a graph neural network (GNN)-based policy that encodes the robot’s topology via message passing among end-cap nodes. The actor generates tendon length commands based on structured observations, enabling morphology-aware learning in both simulation and real-world environments.*
+*Figure 2: Overview of the proposed morphology-aware GNN-SAC framework for tensegrity robot locomotion. The Soft Actor-Critic (SAC) algorithm integrates a graph neural network (GNN)-based policy that encodes the robot's topology via message passing among end-cap nodes. The actor generates tendon length commands based on structured observations, enabling morphology-aware learning in both simulation and real-world environments.*
 
 ## Experimental Results
 
