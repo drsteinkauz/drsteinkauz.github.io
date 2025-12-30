@@ -19,7 +19,7 @@ Tensegrity robots combine rigid rods and elastic cables, offering high resilienc
 
 ## Motivation
 
-Tensegrity robots maintain stability through a global balance of tension—every rod and cable contributes to the overall equilibrium. This intrinsic tensional coupling means that even a local actuation affects the entire structure, making their dynamics strongly interdependent and difficult to model with traditional independent-joint representations.
+Tensegrity robots maintain stability through a global balance of tension: every rod and cable contributes to the overall equilibrium. This intrinsic tensional coupling means that even a local actuation affects the entire structure, making their dynamics strongly interdependent and difficult to model with traditional independent-joint representations.
 
 At the same time, this network of tensile and compressive elements naturally forms a graph. Such a structural property makes tensegrity systems particularly suitable for graph-based learning architectures.
 
